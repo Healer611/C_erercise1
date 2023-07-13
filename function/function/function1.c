@@ -1,7 +1,197 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
-int main()
-{
-	
-	return 0;
-}
+
+//两个数中最大值
+//int max(int a, int b)
+//{
+//	if (a > b)
+//		return a;
+//	else
+//		return b;
+//}
+//
+//int max1(int a, int b)
+//{
+//	int max = a;
+//	if (b > a)
+//		max = b;
+//	return max;
+//}
+//
+//int max2(int a,int b)
+//{
+//	return (a > b ? a : b);
+//}
+//
+//int max3(int a, int b)
+//{
+//	int max;
+//	if (a > b)
+//		max = a;
+//	else
+//		max = b;
+//	return max;
+//}
+//int main()
+//{
+//	int n1, n2;
+//	
+//	puts("请输入两个整数。");
+//	printf("整数1：");	scanf("%d", &n1);
+//	printf("整数2：");	scanf("%d", &n2);
+//
+//	printf("两个数最大的值是%d。", max2(n1, n2));	//三种函数效果一样
+//	return 0;
+//}
+
+
+//三个数中最大值
+//int max4(int a, int b, int c)
+//{
+//	int max = a;
+//	max= b > a ?  b : c > a ?  c :  a;
+//	return max;
+//}
+//int main()
+//{
+//	int a, b, c;
+//	scanf("%d%d%d", &a, &b, &c);
+//	printf("%d", max4(a, b, c));
+//	return 0;
+//}
+
+//打印直角三角形
+//void put_char(int ch, int n)
+//{
+//	while (n-- > 0)
+//	{
+//		putchar(ch);
+//	}
+//}
+//
+//int main()
+//{
+//	int i,len;
+//	scanf("%d", &len);
+//	for (i = 1; i <= len; i++) {
+//		put_char(' ', len - i);
+//		put_char('*', i);
+//		putchar('\n');
+//	}
+//}
+
+//6.2-没有返回值的函数
+//int scan_pint(void)
+//{
+//	int tmp;
+//	do {
+//		printf("请输入一个正整数：");
+//		scanf("%d", &tmp);
+//		if (tmp <= 0)
+//			printf("\a请输入正确的数字");
+//	} while (tmp <= 0);
+//	return tmp;
+//}
+//
+//int rev_int(int num)
+//{
+//	int tmp = 0;
+//	if (num > 0) {
+//		do {
+//			tmp = tmp * 10 + num % 10;
+//			num /= 10;
+//		} while (num > 0);
+//	}
+//	return tmp;
+//}
+//int main()
+//{
+//	int nx = scan_pint();
+//	printf("该整数倒转后的值%d。\n", rev_int(nx));
+//	return 0;
+//}
+
+//通用性
+//void put_char(int ch, int n)
+//{
+//	while (n-- > 0)
+//		putchar(ch);
+//}
+//
+//int main()
+//{
+//	int len;
+//	scanf("%d", &len);
+//	for (int i = 1; i <= len; i++) {
+//		put_char(' ', len - i);
+//		put_char('*', i);
+//		puts("\n");
+//	}
+//}
+
+//const:声明不改变所接收的数组的元素的值
+//void set_zero(int v[],int n)
+//{
+//	for (int i = 0; i < n; i++)
+//		v[i] = 0;
+//}
+//void print_array(const int v[], int n)
+//{
+//	for (int i = 0; i < n; i++)
+//		printf("%3d", v[i]);
+//}
+//int main()
+//{
+//	int ary[] = { 1,2,3,4,5 };
+//	set_zero(ary,5);
+//	print_array(ary, 5);
+//	return 0;
+//}
+
+
+//线性查找（顺序查找）
+#define NUMBER 5
+#define FAILED -1
+//int search(const int v[], int key, int n)
+//{
+//	int i = 0;
+//	while (1) {
+//		if (i == n)
+//			return FAILED;
+//		if (v[i] == key)
+//			return i;
+//		i++;
+//	}
+//}
+//
+//int main()
+//{
+//	int ky,idx;
+//	int vx[NUMBER];
+//	for (int i = 0; i < NUMBER; i++) {
+//		printf("vx[%d]:", i);
+//		scanf("%d", &vx[i]);
+//	}
+//	printf("要查找的值");
+//	scanf("%d", &ky);
+//	idx = search(vx, ky, NUMBER);
+//	if (idx == FAILED)
+//		printf("\a查找失败");
+//	else
+//		printf("%d是数组的第%d号元素\n", ky, idx + 1);
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

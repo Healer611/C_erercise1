@@ -182,16 +182,72 @@
 //}
 
 
+//多维数组的传递
+//void fill(int m[][3], int n, int v)
+//{
+//	int i, j;
+//	for (i = 0; i < n; i++)
+//		for (j = 0; j < 3; j++)
+//			m[i][j] = v;
+//}
+//
+//void mat_print(const int m[][3], int n)
+//{
+//	int i, j;
+//	for (i = 0; i < n; i++) {
+//		for (j = 0; j < 3; j++)
+//			printf("%3d", m[i][j]);
+//		putchar('\n');
+//	}
+//}
+//int main()
+//{
+//	int no;
+//	int x[2][3] = { 0 };
+//	int y[4][3] = { 0 };
+//	printf("赋给所有构成元素的值");
+//	scanf("%d", &no);
+//	fill(x, 2, no);
+//	fill(y, 4, no);
+//	mat_print(x, 2);
+//	mat_print(y, 4);
+//	return 0;
+//}
 
 
+//6.3 作用域和储存期
+
+//int fx = 0;						//静态储存期+文件作用域
+//
+//void func(void)
+//{
+//	static int sx = 0;			//静态储存期+块作用域
+//	int			ax = 0;			//自动储存期+块作用域
+//	printf("%3d%3d%3d\n", ax++, sx++, fx++);
+// }
+//int main(void)
+//{
+//	int i;
+//	puts(" ax sx fx");
+//	puts("-----------");
+//	for (i = 0; i < 10; i++)
+//		func();
+//	puts("-----------");
+//	return 0;
+//}
 
 
-
-
-
-
-
-
-
-
-
+//int fx;
+//int main(void)
+//{
+//	int i;
+//	static int si;
+//	static double sd;
+//	static int sa[5];
+//	printf("fx=%d\n", fx);
+//	printf("si=%d\n", si);
+//	printf("sd=%d]n", sd);
+//	for (i = 0; i < 5; i++)
+//		printf("sa[%d] = %d\n", i, sa[i]);
+//	return 0;
+//}

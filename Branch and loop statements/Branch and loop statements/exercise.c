@@ -104,7 +104,6 @@ int main()
 //			printf("%d ", i);
 //		}
 //	}
-//
 //	printf("\ncount = %d\n", count);
 /*
 方法二还是包含了一些重复的数据，再优化：

@@ -73,6 +73,8 @@ int main()
 //
 //
 //	printf("\ncount = %d\n", count);
+//	return 0;
+//}
 //
 //
 //
@@ -169,6 +171,8 @@ int main()
 	//	if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
 	//		printf("%-5d", year);
 	//}
+//return 0;
+//}
 
 
 

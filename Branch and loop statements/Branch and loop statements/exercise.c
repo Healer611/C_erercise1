@@ -151,21 +151,23 @@
 */
 //int main()
 //{	
-	//int i = 0;
-	//int count = 0;
-	//for (i = 101; i <= 200; i += 2) {
-	//	int j = 0;
-	//	for (j = 2; j <= sqrt(i); j++) {
-	//		if (i % j == 0)
-	//			break;
-	//	}
-	//	if (j > sqrt(i))
-	//	{
+//	int i = 0;
+//	int count = 0;
+//	for (i = 101; i <= 200; i += 2) {
+//		int j = 0;
+//		for (j = 2; j <= sqrt(i); j++) {
+//			if (i % j == 0)
+//				break;
+//		}
+//		if (j > sqrt(i))
+//		{
+//			count++;
+//			printf("%d ", i);
+//		}
+//	}
+//	printf("\ncount = %d\n",count);
 	//		count++;
 	//		printf("%d ", i);
-	//	}
-	//}
-	//printf("\ncount = %d\n",count);
 //	return 0;
 //}
 
@@ -173,14 +175,14 @@
 //-------By Me--------
 //int main()
 //{
-	//int i, n;
-	//for (n = 100; n <= 200; n++) {
-	//	for (i = 2; i < n; i++)
-	//		if (n % i == 0)
-	//			break;
-	//	if (i >= n)
-	//		printf("%-6d", n);
-	//}
+//	int i, n;
+//	for (n = 100; n <= 200; n++) {
+//		for (i = 2; i < n; i++)
+//			if (n % i == 0)
+//				break;
+//		if (i >= n)
+//			printf("%-6d", n);
+//	}
 //	return 0;
 //}
 
@@ -290,7 +292,7 @@ i/*nt main()
 	//printf("%lf", sum);
 //return 0;
 //}
-	
+
 
 //int main()
 //{
@@ -308,15 +310,4 @@ i/*nt main()
 //	return 0;
 //}
 
-int main()
-{
-	int i = 0;
-	int n = 0;
-	scanf("%d", &n);
-	int ret = 0;
-	for (i = 1; i <= n; i++) {
-		ret *= i;
-	}
-	printf("%d\n", ret);
-	return 0;
-}
+;

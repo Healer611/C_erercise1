@@ -50,31 +50,31 @@
 //}
 
 //折半查找（二分查找）
-int main()
-{
-	int arr[] = { 1,2,3,4.5,6,7,8,9,10 };
-	int sz = sizeof(arr) / sizeof(arr[0]);
-	int left = 0;
-	int right = sz - 1;
-	int k = 0,flag=0;
-	scanf("%d", &k);
-	while (left <= right) {
-		int mid = (left + right) / 2;
-		if (arr[mid] < k)
-			left = mid + 1;
-		else if (arr[mid] > k)
-			right = mid - 1;
-		else
-		{
-			printf("找到了，下标是：%d\n", mid);
-			flag = 1;
-			break;
-		}
-	}
-	if (flag == 0)
-		printf("找不到\n");
-	return 0;
-}
+//int main()
+//{
+//	int arr[] = { 1,2,3,4.5,6,7,8,9,10 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	int left = 0;
+//	int right = sz - 1;
+//	int k = 0,flag=0;
+//	scanf("%d", &k);
+//	while (left <= right) {
+//		int mid = (left + right) / 2;
+//		if (arr[mid] < k)
+//			left = mid + 1;
+//		else if (arr[mid] > k)
+//			right = mid - 1;
+//		else
+//		{
+//			printf("找到了，下标是：%d\n", mid);
+//			flag = 1;
+//			break;
+//		}
+//	}
+//	if (flag == 0)
+//		printf("找不到\n");
+//	return 0;
+//}
 
 
 //编写程序数一下 1到 100 的所有整数中出现多少个数字9

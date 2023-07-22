@@ -59,7 +59,7 @@
 //	int k = 0,flag=0;
 //	scanf("%d", &k);
 //	while (left <= right) {
-//		int mid = (left + right) / 2;
+//		int mid = (left + right) / 2;// mid = left + (right-left) / 2；适合较大数字时使用
 //		if (arr[mid] < k)
 //			left = mid + 1;
 //		else if (arr[mid] > k)

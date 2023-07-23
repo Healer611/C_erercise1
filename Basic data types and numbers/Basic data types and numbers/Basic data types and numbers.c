@@ -48,27 +48,29 @@
 //}
 
 //显示数据类型和变量长度
-//int main()
-//{
-//	int na, nb;
-//	double dx, dy;
-//	printf("sizeof(int) = %u\n", (unsigned)sizeof(int));
-//	printf("sizeof(double) = %u\n", (unsigned)sizeof(double));
-//	printf("sizeof(na) = %u\n", (unsigned)sizeof(na));
-//	printf("sizeof(nb) = %u\n", (unsigned)sizeof(nb));
-//	printf("sizeof(na+nb) =%u\n", (unsigned)sizeof(na + nb));//int+int为int
-//	printf("sizeof(dx+dy) =%u\n", (unsigned)sizeof(dx + dy));//int+double为double
-//	printf("sizeof(na+dy) =%u\n", (unsigned)sizeof(na + dy));//double+double为double
-//	return 0;
-//}
+int main()
+{
+	int na, nb;
+	double dx, dy;
+	printf("sizeof(int) = %u\n", (unsigned)sizeof(int));
+	printf("sizeof(double) = %u\n", (unsigned)sizeof(double));
+	printf("sizeof(na) = %u\n", (unsigned)sizeof(na));
+	printf("sizeof(nb) = %u\n", sizeof(nb));
+	printf("sizeof(na+nb) =%u\n", (unsigned)sizeof(na + nb));//int+int为int
+	printf("sizeof(dx+dy) =%u\n", sizeof(dx + dy));//int+double为double
+	printf("sizeof(na+dy) =%u\n", (unsigned)sizeof(na + dy));//double+double为double
+	return 0;
+}
 
 
 //求数组a的元素个数的表达式：sizeof(a）/ sizeof(a[0])
-int main()
-{
-	int    vi[10];
-	double vd[25];
-	printf("数组vi的元素个数= %u\n", (unsigned)(sizeof(vi) / sizeof(vi[0])));
-	printf("数组vd的元素个数= %u\n", (unsigned)(sizeof(vd) / sizeof(vd[0])));
-	return 0;
-}
+//int main()
+//{
+//	int    vi[10];
+//	double vd[25];
+//	printf("数组vi的元素个数= %u\n", (unsigned)(sizeof(vi) / sizeof(vi[0])));
+//	printf("数组vd的元素个数= %u\n", (unsigned)(sizeof(vd) / sizeof(vd[0])));
+//	return 0*/;
+//}
+
+

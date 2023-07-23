@@ -251,3 +251,92 @@
 //		printf("sa[%d] = %d\n", i, sa[i]);
 //	return 0;
 //}
+
+
+//---------------练----习----------------
+
+//实现一个函数，打印乘法口诀表，口诀表的行数和列数自己指定
+//如：输入9，输出9 * 9口诀表，输出12，输出12 * 12的乘法口诀表。
+
+//void mul(int n)
+//{
+//	for (int i = 1; i <= n; i++) {
+//		for (int j = 1; j <= n; j++)
+//			printf("%d*%d=%d ", i, j, i * j);
+//		puts("");
+//	}
+//}
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	mul(n);
+//	return 0;
+//}
+
+
+//实现一个函数来交换两个整数的内容。
+//void change(int *a, int *b)
+//{
+//	int t;
+//	t = *a;
+//	*a = *b;
+//	*b = t;
+//}
+//int main()
+//{
+//	int a, b;
+//	scanf("%d %d", &a, &b);
+//	change(&a, &b);
+//	printf("a=%d , b=%d", a, b);
+//	return 0;
+//}
+
+
+//实现函数判断year是不是润年。
+//void judge(int year)
+//{
+//	if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+//		printf("%d is leap year", year);
+//	else
+//		printf("%d isn't leap year", year);
+//}
+//int main()
+//{
+//	int year;
+//	scanf("%d", &year);
+//	judge(year);
+//	return 0;
+//}
+
+
+
+//实现一个函数is_prime，判断一个数是不是素数。
+//利用上面实现的is_prime函数，打印100到200之间的素数。
+#include <math.h>
+#include <stdbool.h>
+bool is_prime(int num) 
+{
+    if (num <= 1) 
+        return false;
+
+    for (int i = 2; i * i <= num; i++) {
+        if (num % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+int main() {
+    int start = 100;
+    int end = 200;
+    for (int i = start; i <= end; i++) {
+        if (is_prime(i)) {
+            printf("%d ", i);
+        }
+    }
+    printf("\n");
+    return 0;
+}
+

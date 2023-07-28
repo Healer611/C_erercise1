@@ -125,3 +125,97 @@
 //}
 
 
+
+//int main()
+//{
+//	int num1 = 1;
+//	int num2 = 2;
+//	int z=num1 & num2;
+//	int x=num1 | num2;
+//	int s=num1^ num2;
+//	return 0;
+//
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int a, b, c;
+//	a = 5;
+//	c = ++a;
+//	b = ++c, c++, ++a, a++;
+//	b += a++ + c;
+//	printf("a = %d b = %d c = %d\n:", a, b, c);
+//	return 0;
+//}
+
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	a = a ^ b;
+//	b = a ^ b;
+//	a = a ^ b;
+//	printf("a=%d b=%d\n", a, b);
+//	return 0;
+//}
+
+
+
+//写一个函数返回参数二进制中 1 的个数。
+//比如： 15    0000 1111    4 个 1
+//int main()
+//{
+//	int num = 0;
+//	printf("请输入一个整数\n");
+//	scanf("%d", &num);
+//	int count = 0;
+//	for (int i = 0; i < 32; i++) {
+//		if (num & ( 1 << i))
+//			count++;
+//	}
+//	printf("该数在二进制中1的个数 = %d\n", count);
+//	return 0;
+//}
+
+
+//获取一个整数二进制序列中所有的偶数位和奇数位，分别打印出二进制序列
+//int main()
+//{
+//	int num = 3;
+//	int i = 0;
+//	printf("偶数位\n");
+//	for (i = 0; i < sizeof(int) * 8; i+=2) {
+//		if ((num & (1 << i)) != 0)
+//			printf("%d", 1);
+//		else
+//			printf("%d", 0);
+//	}
+//	printf("\n");
+//	printf("奇数位\n");
+//	for (i = 1; i < sizeof(int) * 8; i+=2) {
+//		if ((num & (1 << i)) != 0)
+// 			printf("%d", 1);
+//		else
+//			printf("%d", 0);
+//	}
+//	return 0;
+//}
+
+
+//编程实现：两个int（32位）整数m和n的二进制表达中，有多少个位(bit)不同？
+//输入例子 : 1999 2299
+//输出例子 : 7
+int main()
+{
+	int a = 1999;
+	int b = 2299;
+	int c = a ^ b;
+	int count = 0;
+	for (int i = 0; i < 32; i++) {
+		if ((c & (1 << i)))
+			count++;
+	}
+	printf("%d", count);
+	return 0;
+}

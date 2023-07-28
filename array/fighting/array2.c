@@ -84,21 +84,57 @@
   1. 交换a和g，
   2. 以递归的方式逆置源字符串的剩余部分，剩余部分可以看成一个有效的字符串，再以类似的方式逆置
 */
-#include <string.h>
-void reverse_string(char s[])
-{
-	size_t len = strlen(s);
-	char tmp = s[0];
-	s[0] = s[len - 1];
-	s[len - 1] = '\0';
-	if (strlen(s + 1) >= 2)
-		reverse_string(s + 1);
-	s[len - 1] = tmp;
-}
+//#include <string.h>
+//void reverse_string(char s[])
+//{
+//	size_t len = strlen(s);
+//	char tmp = s[0];
+//	s[0] = s[len - 1];
+//	s[len - 1] = '\0';
+//	if (strlen(s + 1) >= 2)
+//		reverse_string(s + 1);
+//	s[len - 1] = tmp;
+//}
+//int main()
+//{
+//	char arr[] = "asdfghgh";
+//	reverse_string(arr);
+//	printf("%s", arr);
+//	return 0;
+//}
+
+
+//将数组A中的内容和数组B中的内容进行交换。（数组一样大）
+//void Change(char arr1[], char arr2[])
+//{
+//	int i = 0;
+//	for (i = 0; i < 10; i++) {
+//		char tmp = arr1[i];
+//		arr1[i] = arr2[i];
+//		arr2[i] = tmp;
+//	}
+//	printf("--------Finish Change-------\n");
+//	printf("arr1 = %s\narr2 = %s\n", arr1, arr2);
+//}
+//int main()
+//{
+//	char arr1[10] = "aifbwswad";
+//	char arr2[10] = "jeiwubefh";
+//	printf("arr1 = %s\n", arr1);
+//	printf("arr2 = %s\n", arr2);
+//	Change(arr1, arr2);
+//	return 0;
+//}
+
+
+#include <stdio.h>
 int main()
 {
-	char arr[] = "asdfghgh";
-	reverse_string(arr);
-	printf("%s", arr);
+	int a, b, c;
+	a = 5;
+	c = ++a;
+	b = ++c, c++, ++a, a++;
+	b += a++ + c;
+	printf("a = %d b = %d c = %d\n:", a, b, c);
 	return 0;
 }

@@ -167,19 +167,35 @@
 
 
 //递归方式实现打印一个整数的每一位
-void Print(int n)
-{
-	if (n > 9)
-	{
-		Print(n/10);
-	}
-	printf("%d ", n % 10);
-}
+//void Print(int n)
+//{
+//	if (n > 9)
+//	{
+//		Print(n/10);
+//	}
+//	printf("%d ", n % 10);
+//}
+//
+//int main()
+//{
+//	int num = 0;
+//	scanf("%d", &num);
+//	Print(num);
+//	return 0;
+//}
 
-int main()
-{
-	int num = 0;
-	scanf("%d", &num);
-	Print(num);
-	return 0;
-}
+
+//int main()
+//{
+//	int a[10]
+//	for(int i=0;i<10;i++){
+//		for (intj = 0; j < 10; j++) {
+//			if (a[j] > a[i]) {
+//				int tmp = arr[j];
+//				a[j] = a[j + 1];
+//				a[j + 1] = tmp;
+//			}
+//				
+//		}
+//	}
+//}

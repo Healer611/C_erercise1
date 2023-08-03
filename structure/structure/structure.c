@@ -25,15 +25,38 @@
 //	return 0;
 //}
 
+//找问题通过调试
+//int main()
+//{
+//    int i = 0;
+//    int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+//    for (i = 0; i <= 12; i++)
+//    {
+//        arr[i] = 0;
+//        printf("hello bit\n");
+//    }
+//    return 0;
+//}
 
-int main()
-{
-    int i = 0;
-    int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
-    for (i = 0; i <= 12; i++)
-    {
-        arr[i] = 0;
-        printf("hello bit\n");
+#include <stdio.h>
+int main() {
+    int rows, coef = 1, space, i, j;
+    printf("请输入杨辉三角的行数：");
+    scanf("%d", &rows);
+    for (i = 0; i < rows; i++) {
+        for (space = 1; space <= rows - i; space++) {
+            printf("  ");
+        }
+        for (j = 0; j <= i; j++) {
+            if (j == 0 || i == 0) {
+                coef = 1;
+            }
+            else {
+                coef = coef * (i - j + 1) / j;
+            }
+            printf("%4d", coef);
+        }
+        printf("\n");
     }
     return 0;
 }

@@ -38,25 +38,42 @@
 //    return 0;
 //}
 
-#include <stdio.h>
-int main() {
-    int rows, coef = 1, space, i, j;
-    printf("请输入杨辉三角的行数：");
-    scanf("%d", &rows);
-    for (i = 0; i < rows; i++) {
-        for (space = 1; space <= rows - i; space++) {
-            printf("  ");
-        }
-        for (j = 0; j <= i; j++) {
-            if (j == 0 || i == 0) {
-                coef = 1;
-            }
-            else {
-                coef = coef * (i - j + 1) / j;
-            }
-            printf("%4d", coef);
-        }
-        printf("\n");
-    }
-    return 0;
+//#include <stdio.h>
+//int main() {
+//    int rows, coef = 1, space, i, j;
+//    printf("请输入杨辉三角的行数：");
+//    scanf("%d", &rows);
+//    for (i = 0; i < rows; i++) {
+//        for (space = 1; space <= rows - i; space++) {
+//            printf("  ");
+//        }
+//        for (j = 0; j <= i; j++) {
+//            if (j == 0 || i == 0) {
+//                coef = 1;
+//            }
+//            else {
+//                coef = coef * (i - j + 1) / j;
+//            }
+//            printf("%4d", coef);
+//        }
+//        printf("\n");
+//    }
+//    return 0;
+//}
+
+void my_strcpy(char* dest, char* src)
+{
+	while (*dest++ = *src++)
+	{
+		;
+	}
+}
+int main()
+{
+	char arr1[20] = "xxxxxxxxxxxxxx";
+	char arr2[] =   "hello bit";
+
+	printf("%s\n", my_strcpy(arr1, arr2));
+
+	return 0;
 }

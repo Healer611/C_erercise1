@@ -32,3 +32,42 @@
 //}
 
 //模拟实现库函数strcpy
+//#include <stdio.h>
+//#include <assert.h>
+//void s(char* dest, char* src)
+//{
+//	assert(dest != NULL);
+//	assert(src != NULL);
+//	while (*dest++ = *src++)
+//	{
+//		;
+//	}
+//}
+//int main()
+//{
+//	char arr1[20] = "xxxxxxxxxxxxxx";
+//	char arr2[] = "hello bit";
+//	s(arr1, arr2);
+//	printf("%s\n", arr1);
+//
+//	return 0;
+//}
+
+
+//模拟实现库函数strlen
+//#include <stdio.h>
+//
+//size_t strlen(const char* str) {
+//    const char* ptr = str;
+//    while (*ptr != '\0') {
+//        ptr++;
+//    }
+//    return ptr - str;
+//}
+//
+//int main() {
+//    const char* str = "Hello, World!";
+//    size_t length = strlen(str);
+//    printf("%zu\n", length);
+//    return 0;
+//}

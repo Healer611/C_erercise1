@@ -183,3 +183,61 @@
 //    }
 //    return 0;
 //}
+
+
+//int main()
+//{
+//	//char ch = 'w';
+//	//char* pc = &ch;
+//	//char* p = "abcdef";
+//	//printf("%s\n", p);
+//	//printf("%c\n", *p);
+//
+//	char* str3 = "hello bit";
+//	char* str4 = "hello bit";
+//	if (&str3 == &str4)
+//		puts("yes");
+//	else
+//		puts("no");
+//	return 0;
+//}
+
+//int main()
+//{
+//	int arr1[] = { 1,2,3,4,5 };
+//	int arr2[] = { 1,2,3,4,5 };
+//	int arr3[] = { 1,2,3,4,5 };
+//	int* arr[] = { arr1,arr2,arr3 };
+//	for (int i = 0; i < 3; i++) {
+//		int j = 0;
+//		for (j = 0; j < 5; j++) {
+//			printf("%d", arr[i][j]);
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
+
+#include <stdio.h>
+void print(int(*p)[3], int sz)
+{
+	int i = 0;
+	for (i = 0; i < 3; i++)
+	{
+		int j = 0;
+		for (j = 0; j < 3; j++) {
+			printf("%d",p[i][j]);
+		}
+		printf("\n");
+		
+	}
+}
+int main()
+{
+	int arr[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
+	int* p = arr;
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	//一级指针p，传给函数
+	print(p, sz);
+	return 0;
+}

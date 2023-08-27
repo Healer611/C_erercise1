@@ -61,19 +61,3 @@
 //    return 0;
 //}
 
-void my_strcpy(char* dest, char* src)
-{
-	while (*dest++ = *src++)
-	{
-		;
-	}
-}
-int main()
-{
-	char arr1[20] = "xxxxxxxxxxxxxx";
-	char arr2[] =   "hello bit";
-
-	printf("%s\n", my_strcpy(arr1, arr2));
-
-	return 0;
-}

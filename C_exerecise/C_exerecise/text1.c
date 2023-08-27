@@ -63,11 +63,145 @@
 //        ptr++;
 //    }
 //    return ptr - str;
-//}
+//} 
 //
 //int main() {
 //    const char* str = "Hello, World!";
 //    size_t length = strlen(str);
 //    printf("%zu\n", length);
+//    return 0;
+//}
+
+//int main()
+//{
+//	int arr[10001] = { 0 };
+//	gets(arr);
+//	char* left = arr;
+//	char* right = arr + strlen(arr) - 1;
+//	while (left < right) {
+//		char tmp = *left;
+//		*left = *right;
+//		*right = tmp;
+//		left++;
+//		right--;
+//	}
+//	printf("%s\n", arr);
+//	return 0;
+//}
+
+
+//实现一个函数，可以左旋字符串中的k个字符。
+//例如：
+//ABCD左旋一个字符得到BCDA
+//ABCD左旋两个字符得到CDAB
+//void change(char* a,int time)
+//{
+//	int len = strlen(a);
+//	int i,j;
+//	for (i = 0; i < time; i++)
+//	{
+//		int t = a[0];
+//		for (j = 0; j < len; j++)
+//		{
+//			if (j == len - 1)
+//				a[j] = t;
+//			else
+//				a[j] = a[j + 1];
+//		}
+//	}
+//}
+//int main()
+//{
+//	char a[] = "ABCD";
+//	int time = 2;
+//	change(a, time);
+//	printf("time=%d, change=%s\n",time,a);
+//	return 0;
+//}
+
+
+//写一个函数，判断一个字符串是否为另外一个字符串旋转之后的字符串。
+//例如：给定s1 = AABCD和s2 = BCDAA，返回1
+//给定s1 = abcd和s2 = ACBD，返回0.
+//AABCD左旋一个字符得到ABCDA
+//AABCD左旋两个字符得到BCDAA
+//AABCD右旋一个字符得到DAABC
+//int find(const char* str, char* find)
+//{
+//	char t[100] = { 0 };
+//	strcpy(t, str);
+//	strcat(t, str);
+//	return strstr(t, find) != NULL;
+//}
+//int main()
+//{
+//	char s1[] = "AABCD";
+//	char s2[] = "BCDAA";
+//	printf("%d\n", find(s1, s2));
+//	return 0;
+//}
+//int x = 5, y = 7;
+//void swap()
+//{
+//	int z;
+//	z = x;
+//	x = y;
+//	y = z;
+//}
+//int main()
+//{
+//	//int x = 3, y = 8;
+//	//swap();
+//	//printf("%d,%d\n",x, y);
+//	char s[] = "\\123456\123456\t";
+//	printf("%d\n", strlen(s));
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int main() {
+//    int m;
+//    scanf("%d", &m);
+//
+//    long long cube = (long long)m * m * m;  // 计算 m 的立方
+//
+//    int start = m * m - (m - 1);  // 计算起始奇数值
+//    long long sum = 0;  // 初始化累加和
+//
+//    // 输出 m 个连续奇数，并计算累加和
+//    for (int i = 0; i < m; i++) {
+//        printf("%d", start + 2 * i);  // 输出当前奇数
+//        sum += start + 2 * i;  // 累加当前奇数
+//        if (i < m - 1) {
+//            printf("+");  // 输出加号，除了最后一个数
+//        }
+//    }
+//
+//    printf("=%lld\n", sum);  // 输出累加和
+//
+//    return 0;
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//int main() {
+//    size_t size = 10;  // 你想要分配的字节数
+//    int* ptr = (int*)malloc(size);  // 分配大小为 size 的内存块，并将指针转换为 int 类型
+//    if (ptr == NULL) {
+//        printf("内存分配失败！\n");
+//        return 1;
+//    }
+//
+//    // 使用分配的内存
+//    for (size_t i = 0; i < size; i++) {
+//        ptr[i] = i * 2;
+//        printf("%d ", ptr[i]);
+//    }
+//
+//    // 释放内存
+//    free(ptr);
+//
 //    return 0;
 //}

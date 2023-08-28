@@ -205,3 +205,44 @@
 //
 //    return 0;
 //}
+
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//// 比较函数
+//int compare(const void* a, const void* b) {
+//    return (*(int*)a - *(int*)b);
+//}
+//
+//int main() {
+//    int arr[] = { 9, 3, 6, 1, 8, 2, 5, 7, 4 };
+//
+//    size_t length = sizeof(arr) / sizeof(arr[0]);
+//
+//    // 使用 qsort 对数组进行排序
+//    qsort(arr, length, sizeof(int), compare);
+//
+//    printf("排序后的数组：");
+//    for (size_t i = 0; i < length; i++) {
+//        printf("%d ", arr[i]);
+//    }
+//
+//    return 0;
+//}
+
+
+int main()
+{
+	char str[] = "Geneius";
+	print(str);
+	return 0;
+}
+print(char* s)
+{
+	if (*s)
+	{
+		print(++s);
+		printf("%c", *s);
+	}
+}

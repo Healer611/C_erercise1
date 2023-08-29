@@ -218,26 +218,26 @@
 //	return 0;
 //}
 
-#include <stdio.h>
-void print(int(*p)[3], int sz)
-{
-	int i = 0;
-	for (i = 0; i < 3; i++)
-	{
-		int j = 0;
-		for (j = 0; j < 3; j++) {
-			printf("%d",p[i][j]);
-		}
-		printf("\n");
-		
-	}
-}
-int main()
-{
-	int arr[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
-	int* p = arr;
-	int sz = sizeof(arr) / sizeof(arr[0]);
-	//一级指针p，传给函数
-	print(p, sz);
-	return 0;
-}
+//#include <stdio.h>
+//void print(int(*p)[3], int sz)
+//{
+//	int i = 0;
+//	for (i = 0; i < 3; i++)
+//	{
+//		int j = 0;
+//		for (j = 0; j < 3; j++) {
+//			printf("%d",p[i][j]);
+//		}
+//		printf("\n");
+//		
+//	}
+//}
+//int main()
+//{
+//	int arr[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
+//	int* p = arr;
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	//一级指针p，传给函数
+//	print(p, sz);
+//	return 0;
+//}

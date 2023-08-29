@@ -230,15 +230,15 @@
 //    printf("ret = %d\n", ret);
 //    return 0;
 //}
-int count_bits(unsigned x)
-{
-	int bits = 0;
-	while (x) {
-		if (x & 1U) bits++;
-		x >>= 1;
-	}
-	return bits;
-}
+//int count_bits(unsigned x)
+//{
+//	int bits = 0;
+//	while (x) {
+//		if (x & 1U) bits++;
+//		x >>= 1;
+//	}
+//	return bits;
+//}
 
 //int int_bits(void)
 //{

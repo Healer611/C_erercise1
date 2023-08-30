@@ -38,26 +38,31 @@
 //    return 0;
 //}
 
-//#include <stdio.h>
-//int main() {
-//    int rows, coef = 1, space, i, j;
-//    printf("请输入杨辉三角的行数：");
-//    scanf("%d", &rows);
-//    for (i = 0; i < rows; i++) {
-//        for (space = 1; space <= rows - i; space++) {
-//            printf("  ");
-//        }
-//        for (j = 0; j <= i; j++) {
-//            if (j == 0 || i == 0) {
-//                coef = 1;
-//            }
-//            else {
-//                coef = coef * (i - j + 1) / j;
-//            }
-//            printf("%4d", coef);
-//        }
-//        printf("\n");
-//    }
-//    return 0;
+
+//#include < stdio.h >
+//struct S
+//{
+//	int a;
+//	int b;
+//};
+//int main()
+//{
+//	struct S a, * p = &a;
+//	a.a = 99;
+//	printf("%d\n", p->a);//或(*p).a
+//	return 0;
 //}
 
+typedef struct student{
+	char name[111];
+	int height;
+	float weight;
+	long schols;
+}S;
+int main()
+{
+	S a;
+	a.height = 8;
+	printf("%d\n", a.height);
+	return 0;
+}

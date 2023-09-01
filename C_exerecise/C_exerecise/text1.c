@@ -248,33 +248,83 @@
 //}
 
 
-void swap(int* px, int* py)
-{
-	int temp = *px;
-	*px = *py;
-	*py = temp;
-}
+//void swap(int* px, int* py)
+//{
+//	int temp = *px;
+//	*px = *py;
+//	*py = temp;
+//}
+//
+///*--- 排列顺序为*n1≤*n2 ---*/
+//void sort2(int* n1, int* n2)
+//{
+//	if (*n1 > *n2)
+//		swap(n1, n2);
+//}
+//
+//int main(void)
+//{
+//	int na, nb;
+//
+//	puts("请输入两个整数。");
+//	printf("整数A：");   scanf("%d", &na);
+//	printf("整数B：");   scanf("%d", &nb);
+//
+//	sort2(&na, &nb);
+//
+//	puts("将两数的值按升序排列。");
+//	printf("整数A是%d。\n", na);
+//	printf("整数B是%d。\n", nb);
+//
+//	return 0;
+//}
 
-/*--- 排列顺序为*n1≤*n2 ---*/
-void sort2(int* n1, int* n2)
-{
-	if (*n1 > *n2)
-		swap(n1, n2);
-}
 
-int main(void)
-{
-	int na, nb;
+//#include <stdio.h>
+//int main() {
+//    int rows, coef = 1, space, i, j;
+//    printf("请输入杨辉三角的行数：");
+//    scanf("%d", &rows);
+//    for (i = 0; i < rows; i++) {
+//        for (space = 1; space <= rows - i; space++) {
+//            printf("  ");
+//        }
+//        for (j = 0; j <= i; j++) {
+//            if (j == 0 || i == 0) {
+//                coef = 1;
+//            }
+//            else {
+//                coef = coef * (i - j + 1) / j;
+//            }
+//            printf("%4d", coef);
+//        }
+//        printf("\n");
+//    }
+//    return 0;
+//}	
 
-	puts("请输入两个整数。");
-	printf("整数A：");   scanf("%d", &na);
-	printf("整数B：");   scanf("%d", &nb);
+#include <stdio.h>
+#include <stdlib.h>
 
-	sort2(&na, &nb);
+int main() {
+    char str[100][22];
+    int i = 0;
+    int x;
 
-	puts("将两数的值按升序排列。");
-	printf("整数A是%d。\n", na);
-	printf("整数B是%d。\n", nb);
+    while (1) {
+        x = scanf("%21[a-zA-Z]", str[i]);
+        if (x == EOF || x == 0) // Break on EOF or if no valid word is read
+            break;
 
-	return 0;
+        i++;
+
+        if (getchar() == '\n') // Break on newline
+            break;
+    }
+
+    for (int j = i - 1; j >= 0; j--) {
+        printf("%s ", str[j]);
+    }
+
+    return 0;
 }

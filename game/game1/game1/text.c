@@ -23,7 +23,6 @@ void game()
 		if (ret != 'C') {
 			break;
 		}
-		
 		ComputerMove(board, ROW, COL);
 		DisplayBoard(board, ROW, COL);
 		ret = IsWin(board, ROW, COL);

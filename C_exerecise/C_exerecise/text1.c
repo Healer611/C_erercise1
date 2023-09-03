@@ -20,24 +20,24 @@
 // ‰»Î£∫$bo * y gi!r#l
 // ‰≥ˆ£∫l r gi y bo
 
-#include <ctype.h>
-#include <stdio.h>
-#include <string.h>
-int main() {
-    char s[10000];
-    gets(s);
-    int len = strlen(s);
-    int a = len - 1;
-    while (a >= 0) {
-        while (a >= 0 && !isalpha(s[a]))
-            a--;
-        int b = a;
-        while (a >= 0 && isalpha(s[a]))
-            a--;
-        for (int i = a + 1; i <= b; i++)
-            printf("%c", s[i]);
-        if (a > 0)
-            printf(" ");
-    }
-    return 0;
-}
+//#include <ctype.h>
+//#include <stdio.h>
+//#include <string.h>
+//int main() {
+//    char s[10000];
+//    gets(s);
+//    int len = strlen(s);
+//    int a = len - 1;
+//    while (a >= 0) {
+//        while (a >= 0 && !isalpha(s[a]))
+//            a--;
+//        int b = a;
+//        while (a >= 0 && isalpha(s[a]))
+//            a--;
+//        for (int i = a + 1; i <= b; i++)
+//            printf("%c", s[i]);
+//        if (a > 0)
+//            printf(" ");
+//    }
+//    return 0;
+//}

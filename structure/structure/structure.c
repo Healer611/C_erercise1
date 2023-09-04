@@ -53,16 +53,16 @@
 //	return 0;
 //}
 
-typedef struct student{
-	char name[111];
-	int height;
-	float weight;
-	long schols;
-}S;
-int main()
-{
-	S a;
-	a.height = 8;
-	printf("%d\n", a.height);
-	return 0;
-}
+//typedef struct student{
+//	char name[111];
+//	int height;
+//	float weight;
+//	long schols;
+//}S;
+//int main()
+//{
+//	S a;
+//	a.height = 8;
+//	printf("%d\n", a.height);
+//	return 0;
+//}

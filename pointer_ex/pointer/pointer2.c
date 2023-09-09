@@ -59,30 +59,147 @@
 ////排序结构体，两个结构体数据可能不能直接使用<>比较
 ////也就是不同类型数据，比较大小，方法有差异
 
-//输出函数
-void print_arr(int arr[], int sz)
-{
-	for (int i = 0; i < sz; i++) {
-		printf("%d", arr[i]);
-	}
-	printf("\n");
-}
+////输出函数
+//void print_arr(int arr[], int sz)
+//{
+//	for (int i = 0; i < sz; i++) {
+//		printf("%d", arr[i]);
+//	}
+//	printf("\n");
+//}
+//
+//#include <stdlib.h>
+//int cmp_int(const void* e1, const void* e2)
+//{
+//	return *(int*)e1 - *(int*)e2;
+//}
+//void test1()
+//{
+//	int arr[] = { 9,8,7,6,5,4,3,2,1,0 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	print_arr(arr, sz);
+//	qsort(arr, sz, sizeof(arr[0]), cmp_int);
+//	print_arr(arr, sz);
+//}
+//
+//struct Stu
+//{
+//	char name[20];
+//	int age;
+//};
+//
+////结构体输出函数
+//void print_arrr(struct Stu arr[], int sz)
+//{
+//	for (int i = 0; i < sz; i++) {
+//		printf("%s: %d\n", arr[i].name, arr[i].age);
+//	}
+//}
+//
+// //按照年龄比较
+//int cmp_stu_by_age(const void* e1, const void* e2)
+//{
+//	return ((struct Stu*)e1)->age - ((struct Stu*)e2)->age;
+//}
+//void test2()
+//{
+//	struct Stu arr1[] = { {"zhangsan",20},{"lisi",30},{"王五",12} };
+//	int sz = sizeof(arr1) / sizeof(arr1[0]);
+//	qsort(arr1, sz, sizeof(arr1[0]), cmp_stu_by_age);
+//	print_arrr(arr1, sz);
+//}
+// 
+// //按照名字比较
+//#include <string.h>
+//int cmp_stu_by_name(const void* e1, const void* e2)
+//{
+//	return strcmp(((struct Stu*)e1)->name, ((struct Stu*)e2)->name);
+//}
+//void test3()
+//{
+//	struct Stu arr1[] = { {"zhangsan", 20}, {"lisi", 30}, {"wangwu", 12} };
+//	int sz = sizeof(arr1) / sizeof(arr1[0]);
+//	qsort(arr1, sz, sizeof(arr1[0]), cmp_stu_by_name);
+//	print_arrr(arr1, sz);
+//}
+//int main()
+//{
+//	test1();
+//	test2();
+//	test3();
+//	return 0;
+//}
 
-#include <stdlib.h>
-int cmp_int(const void* e1, const void* e2)
+
+
+//杨氏矩阵
+//作业内容：
+//有一个数字矩阵，矩阵的每行从左到右是递增的，矩阵从上到下是递增的，请编写程序在这样的矩阵中查找某个数字是否存在。
+//要求：时间复杂度小于O(N);
+/*1 2 3 4 5
+  2 3 4 5 6
+  3 4 5 6 7
+  4 5 6 7 8*/
+//#define ROWS 4
+//#define COLS 4
+//#include <stdlib.h>
+//int sort(const void* a, const void* b)
+//{
+//    return *(int*)a - *(int*)b;
+//}
+//int cmp(int (*p)[COLS],int sz)
+//{
+//    int* t = (int*)malloc(sz * sizeof(int));
+//    int k = 0;
+//    for (int i = 0; i < ROWS; i++) {
+//        for (int j = 0; j < COLS; j++) {
+//            t[k] = p[i][j];
+//            k++;
+//        }
+//    }
+//    qsort(t, ROWS * COLS, sizoef(t[0]), sort);
+//    
+//}
+//int main()
+//{
+//    int arr[ROWS][COLS] = { {1, 4, 7, 11},
+//                            {2, 5, 8, 12},
+//                            {3, 6, 9, 16},
+//                           {10, 13, 14, 17} };
+//    int sz = sizeof(arr) / sizeof(arr[0][0]);
+//	return 0;
+//}
+
+#define ROWS 4
+#define COLS 4
+int find(int(*p)[COLS], int target)
 {
-	return *(int*)e1 - *(int*)e2;
+    int row = 0;
+    int col = COLS - 1;
+    while (row<ROWS&&col>=0) {
+        if (p[row][col] == target)
+            return 1;
+        else if (p[row][col] < target)
+            row++;
+        else
+            col--;
+    }
+    return 0;
 }
-void test1()
+int main() 
 {
-	int arr[] = { 9,8,7,6,5,4,3,2,1,0 };
-	int sz = sizeof(arr) / sizeof(arr[0]);
-	print_arr(arr, sz);
-	qsort(arr, sz, sizeof(arr[0]), cmp_int);
-	print_arr(arr, sz);
-}
-int main()
-{
-	test1();
-	return 0;
+    int arr[ROWS][COLS] = {
+        {1, 4, 7, 11},
+        {2, 5, 8, 12},
+        {3, 6, 9, 16},
+        {10, 13, 14, 17}    };
+    int target = 9;
+    if (find(arr, target)) {
+        printf("目标数字 %d 存在于矩阵中。\n", target);
+    }
+    else {
+        printf("目标数字 %d 不存在于矩阵中。\n", target);
+    }
+
+    return 0;
 }

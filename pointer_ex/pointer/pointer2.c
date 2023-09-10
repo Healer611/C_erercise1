@@ -140,35 +140,6 @@
   2 3 4 5 6
   3 4 5 6 7
   4 5 6 7 8*/
-//#define ROWS 4
-//#define COLS 4
-//#include <stdlib.h>
-//int sort(const void* a, const void* b)
-//{
-//    return *(int*)a - *(int*)b;
-//}
-//int cmp(int (*p)[COLS],int sz)
-//{
-//    int* t = (int*)malloc(sz * sizeof(int));
-//    int k = 0;
-//    for (int i = 0; i < ROWS; i++) {
-//        for (int j = 0; j < COLS; j++) {
-//            t[k] = p[i][j];
-//            k++;
-//        }
-//    }
-//    qsort(t, ROWS * COLS, sizoef(t[0]), sort);
-//    
-//}
-//int main()
-//{
-//    int arr[ROWS][COLS] = { {1, 4, 7, 11},
-//                            {2, 5, 8, 12},
-//                            {3, 6, 9, 16},
-//                           {10, 13, 14, 17} };
-//    int sz = sizeof(arr) / sizeof(arr[0][0]);
-//	return 0;
-//}
 
 #define ROWS 4
 #define COLS 4

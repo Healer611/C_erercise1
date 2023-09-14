@@ -55,8 +55,8 @@ void test1()
 	bubble_sort(arr, sz, sizeof(arr[0]), cmp_int);
 	Print(arr, sz);
 }
-//int main()
-//{
-//	test1();
-//	return 0;
-//}
+int main()
+{
+	test1();
+	return 0;
+}

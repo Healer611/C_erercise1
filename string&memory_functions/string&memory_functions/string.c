@@ -61,34 +61,35 @@ char* my_strstr(char* str1, char* str2)
 	}
 	return NULL;
 }
-int main()
-{
-	//size_t sz = my_strlen("aasaad");
-	//printf("%d\n", sz);
+//int main()
+//{
+//	//size_t sz = my_strlen("aasaad");
+//	//printf("%d\n", sz);
+//
+//	//char arr1[] = "hello";
+//	//char arr2[] = "haha";
+//	//printf("%s\n", my_strcpy(arr1, arr2));
+//
+//	//char arr1[20] = "hello";
+//	//char arr2[] = "haha";
+//	//printf("%s\n", my_strcat(arr1, arr2));
+//
+//	//int ret = my_strcmp("bbq", "bbb");	
+//	//if (ret > 0)
+//	//	printf("大于\n");
+//	//else if (ret < 0)
+//	//	printf("小于\n");
+//	//else
+//	//	printf("等于\n");
+//
+//	char arr1[] = "abbbcdef";
+//	char arr2[] = "bbc";
+//
+//	char* ret = my_strstr(arr1, arr2);
+//	if (ret != NULL)
+//		printf("%s\n", ret);
+//	else
+//		printf("找不到\n");
+//	return 0;
+//}
 
-	//char arr1[] = "hello";
-	//char arr2[] = "haha";
-	//printf("%s\n", my_strcpy(arr1, arr2));
-
-	//char arr1[20] = "hello";
-	//char arr2[] = "haha";
-	//printf("%s\n", my_strcat(arr1, arr2));
-
-	//int ret = my_strcmp("bbq", "bbb");	
-	//if (ret > 0)
-	//	printf("大于\n");
-	//else if (ret < 0)
-	//	printf("小于\n");
-	//else
-	//	printf("等于\n");
-
-	char arr1[] = "abbbcdef";
-	char arr2[] = "bbc";
-
-	char* ret = my_strstr(arr1, arr2);
-	if (ret != NULL)
-		printf("%s\n", ret);
-	else
-		printf("找不到\n");
-	return 0;
-}

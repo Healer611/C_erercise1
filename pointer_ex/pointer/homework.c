@@ -22,20 +22,20 @@ int find(int(*p)[COLS], int target)
     }
     return 0;
 }
-int main()
-{
-    int arr[ROWS][COLS] = {
-        {1, 4, 7, 11},
-        {2, 5, 8, 12},
-        {3, 6, 9, 16},
-        {10, 13, 14, 17} };
-    int target = 9;
-    if (find(arr, target)) {
-        printf("目标数字 %d 存在于矩阵中。\n", target);
-    }
-    else {
-        printf("目标数字 %d 不存在于矩阵中。\n", target);
-    }
-
-    return 0;
-}
+//int main()
+//{
+//    int arr[ROWS][COLS] = {
+//        {1, 4, 7, 11},
+//        {2, 5, 8, 12},
+//        {3, 6, 9, 16},
+//        {10, 13, 14, 17} };
+//    int target = 9;
+//    if (find(arr, target)) {
+//        printf("目标数字 %d 存在于矩阵中。\n", target);
+//    }
+//    else {
+//        printf("目标数字 %d 不存在于矩阵中。\n", target);
+//    }
+//
+//    return 0;
+//}

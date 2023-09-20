@@ -262,14 +262,14 @@
 //	un.i = 0x11223344;
 //	un.c = 0x55;
 //
-//	//printf("%p\n", &un);
-//	//printf("%p\n", &(un.i));
-//	//printf("%p\n", &(un.c));
+//	printf("%p\n", &un);
+//	printf("%p\n", &(un.i));
+//	printf("%p\n", &(un.c));
 //
 //
 //	return 0;
 //}
-
+//
 
 
 
@@ -314,4 +314,34 @@
 //	printf("%d\n", sizeof(union Un2));//16
 //
 //	return 0;
+//}
+
+
+
+//enum ENUM_A
+//{
+//	X1,
+//	Y1,
+//	Z1 = 255,
+//	A1,
+//	B1,
+//};
+//enum ENUM_A enumA = Y1;
+//enum ENUM_A enumB = B1;
+//
+//
+//int main()
+//{
+//    union
+//    {
+//        short k;
+//        char i[2];
+//    }*s, a;
+//    s = &a;
+//    s->i[0] = 0x39;
+//    s->i[1] = 0x38;
+//    printf("%x\n", a.k);
+//
+//    printf("%d %d\n", enumA, enumB);
+//    return 0;
 //}

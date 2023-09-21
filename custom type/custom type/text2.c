@@ -73,6 +73,7 @@ void test()
 			ShowContact(&con);
 			break;
 		case SORT:
+			SortContact(&con);
 			break;
 		case EXIT:
 			break;

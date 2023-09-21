@@ -151,25 +151,53 @@ void ModifyContact(Contact* pc)
 	}
 }
 
-int Sortchar(const void* a, const void* b)
-{
-	return *(int*)a - *(int*)b;
+
+int CompareByName(const void* a, const void* b) {
+	return strcmp(((PeoInfo*)a)->name, ((PeoInfo*)b)->name);
 }
-int Sortchar(const void* a, const void* b)
-{
-	return *(int*)a - *(int*)b;
+
+int CompareByAge(const void* a, const void* b) {
+	return ((PeoInfo*)a)->age - ((PeoInfo*)b)->age;
 }
+
+int CompareByAddr(const void* a, const void* b) {
+	return strcmp(((PeoInfo*)a)->addr, ((PeoInfo*)b)->addr);
+}
+
 void SortContact(Contact* pc)
 {
 	assert(pc);
 	char del[10];
 	printf("请输入想要排序的项目\n");
 	scanf("%s", del);
-	if (del == "name"||del=="address")
-	{
-		qsort(pc->data[1].name, pc->sz, sizeof(pc->data[0].name), Sortchar);
-	}
-	else if (del == "age") {
 
+	if (strcmp(del, "name") == 0)
+	{
+		qsort(pc->data, pc->sz, sizeof(PeoInfo), CompareByName);
+	}
+	else if (strcmp(del, "age") == 0)
+	{
+		qsort(pc->data, pc->sz, sizeof(PeoInfo), CompareByAge);
+	}
+	else if (strcmp(del, "addr") == 0)
+	{
+		qsort(pc->data, pc->sz, sizeof(PeoInfo), CompareByAddr);
+	}
+	else
+	{
+		printf("无效的排序选项\n");
+		return;
+	}
+
+	// 输出排序后的结果
+	printf("%-20s\t%-4s\t%-5s\t%-12s\t%-30s\t\n", "名字", "年龄", "性别", "电话", "地址");
+	for (int i = 0; i < pc->sz; i++)
+	{
+		printf("%-20s\t%-4d\t%-5s\t%-12s\t%-30s\t\n",
+			pc->data[i].name,
+			pc->data[i].age,
+			pc->data[i].sex,
+			pc->data[i].tele,
+			pc->data[i].addr);
 	}
 }

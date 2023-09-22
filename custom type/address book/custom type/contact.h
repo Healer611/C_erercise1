@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <stdio.h>
+#include <string.h>
 
 #define MAX 100
 #define MAX_NAME 20

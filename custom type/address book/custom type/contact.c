@@ -50,7 +50,6 @@ int FindByName(const Contact* pc, char name[])
 	/*用来支持函数内部的查找功能，不需要让别人知道，
 	所以可以不在头文件里声明，在这个文件内函数能调用即可，加上static也可以*/
 	int i;
-	int flag = 0;//记录是否找到要删除的name
 	for (i = 0; i < pc->sz; i++)
 	{
 	//比较char类型字符串name需要strcmp
@@ -110,7 +109,7 @@ void SearchContact(const Contact* pc)
 {
 	assert(pc);
 	char name[MAX_NAME] = { 0 };
-	printf("请输入要查找人的名字\n");
+	printf("请输入要查找人的名字：");
 	scanf("%s", name);
 	int pos = FindByName(pc, name);
 	if (pos == -1)

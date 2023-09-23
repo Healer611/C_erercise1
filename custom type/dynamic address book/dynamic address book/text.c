@@ -43,8 +43,10 @@ int main()
 			break;
 		case EXIT:
 			DestroyContact(&con);
+			printf("退出通讯录\n");
 			break;
 		default:
+			printf("选择错误，请重新选择\n");
 			break;
 		}
 	} while (input);

@@ -13,24 +13,24 @@
 
 enum OPPION
 {
-	EXIT,
-	ADD,
-	DEL,
-	SEARCH,
-	MODIFY,//修改
-	SHOW,
-	SORT  //排序
+	EXIT,	//退出
+	ADD,	//添加
+	DEL,	//删除
+	SEARCH, //查找
+	MODIFY, //修改
+	SHOW,   //打印
+	SORT    //排序
 };
 
 
 //类型的声明
 typedef struct PeoInfo
 {
-	char name[20];
+	char name[MAX_NAME];
 	int age;
-	char sex[5];
-	char tele[12];
-	char addr[30];
+	char sex[MAX_SEX];
+	char tele[MAX_TELE];
+	char addr[MAX_ADDR];
 }PeoInfo;
 
 //通讯录

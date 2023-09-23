@@ -66,23 +66,6 @@ void DelContact(Contact* pc)
 	char name[MAX_NAME] = { 0 };
 	printf("请输入要删除的人的名字:>");
 	scanf("%s", name);
-
-	//int del;//记录找到的name的下标
-	//int i;
-	//int flag = 0;//记录是否找到要删除的name
-	//for (i = 0; i < pc->sz; i++)
-	//{
-	//	//比较char类型字符串name需要strcmp
-	//	if (strcmp(pc->data[i].name, name) == 0) {
-	//		del = i;
-	//		flag = 1;//找到name赋值1
-	//		break;
-	//	}
-	//}
-	//if (flag == 0) {
-	//	printf("要删除的人不存在\n");
-	//	return;
-	//}
 	 
 	int del = FindByName(pc, name);
 	if (del == -1) {
@@ -95,10 +78,10 @@ void DelContact(Contact* pc)
 	for (i = del; i < pc->sz - 1; i++) {
 		pc->data[i] = pc->data[i + 1];
 	}
-	/*该函数每次只删除一个name，比如传入的结构体指针包含二十个name，即sz=20
-		删除一个则该name后续的元素都要往前移动一位，
-		最后一位元素的下标为19，则i要小于sz-1，
-		保证下标为del到最后一个元素下标为sz-1向前移动一位*/
+	/*该函数每次只删除一个name，比如：传入的结构体指针包含二十个name，即sz=20。
+	删除一个则该name后续的元素都要往前移动一位，最后一位元素的下标为19，
+	需要移动sz-1次，则 i 要小于 sz-1，
+	保证下标为del到最后一个元素下标为sz向前移动一位*/
 
 	pc->sz--;
 	printf("成功删除联系人\n");
@@ -116,7 +99,8 @@ void SearchContact(const Contact* pc)
 		printf("要查找的人不存在\n");
 	else
 	{
-		printf("%-20s\t%-4s\t%-5s\t%-12s\t%-30s\t\n", "名字", "年龄", "性别", "电话", "地址");
+		printf("%-20s\t%-4s\t%-5s\t%-12s\t%-30s\t\n", 
+			"名字", "年龄", "性别", "电话", "地址");
 		printf("%-20s\t%-4d\t%-5s\t%-12s\t%-30s\t\n",
 				pc->data[pos].name,
 				pc->data[pos].age,

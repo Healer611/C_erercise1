@@ -24,32 +24,6 @@ void test()
 	InitContact(&con);
 	//初始化通讯录，函数内部改变改变外部变量通讯录con，需要传递地址给初始化函数
 	//结构体传参最好传地址
-//	do {
-//		menu();
-//		printf("请选择:>");
-//		scanf("%d", &input);
-//		switch (input)
-//		{
-//			case 1:
-//				AddContact(&con);
-//				break;
-//			case 2:
-//				break;
-//			case 3:
-//				break;
-//			case 4:
-//				break;
-//			case 5:
-//				break;
-//			case 6:
-//				break;
-//			case 0:
-//				break;
-//			default:
-//				break;
-//		}
-//	} while (input);
-//}
 
 	do {
 		menu();

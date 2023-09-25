@@ -93,3 +93,46 @@ char* my_strstr(char* str1, char* str2)
 //	return 0;
 //}
 
+
+
+//模拟实现strncat
+// 
+char* my_strncat(char* d, const char* s, size_t num)
+{
+	char* ret = d;
+	while (*d)
+		d++;
+	while (num) {
+		*d++ = *s++;
+		num--;
+	}
+	return ret;
+}
+//int main()
+//{
+//	char a[20] = "hello";
+//	char b[20] = "my dog";
+//	printf("%s\n", my_strncat(a, b, 2));
+//	return 0;
+//}
+// 
+//模拟实现strncpy
+
+char* my_strncpy(char* d, const char* s, size_t num)
+{
+	char* ret = d;
+	while (num) {
+		*d++ = *s++;
+		num--;
+		if (num == 0)
+			*d = '\0';
+	}
+	return ret;
+}
+//int main()
+//{
+//	char a[20] = "hello";
+//	char b[20] = "my dog";
+//	printf("%s\n", my_strncpy(a, b, 2));
+//	return 0;
+//}

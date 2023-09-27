@@ -178,24 +178,7 @@
 //
 //	return 0;
 //}
-struct S
-{
-	int a;
-	float s;
-	char str[10];
-};
 
-int main()
-{
-	char arr[30] = { 0 };
-	struct S s = { 100, 3.14f, "hehe" };
-	struct S tmp = { 0 };
-
-	sprintf(arr, "%d %f %s", s.a, s.s, s.str);
-	printf("%s\n", arr);
-
-	return 0;
-}
 //
 //struct S
 //{

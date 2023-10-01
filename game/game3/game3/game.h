@@ -1,0 +1,24 @@
+#pragma once
+
+#include <stdio.h>
+
+int map[19][19];
+int flag;
+
+//≥ı ºªØ
+void init();
+
+//≈–∂œ ‰”Æ
+int isWin(int x, int y);
+
+//ÕÊº“œ¬∆Â
+int playerMove(int x, int y);
+
+//”Œœ∑≤Àµ•
+void menuView();
+
+//¥Ú”°∆Â≈Ã
+void gameView_ShowMap();
+
+//≈–∂œ ‰”Æ
+void winView();

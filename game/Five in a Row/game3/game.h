@@ -1,9 +1,9 @@
 #pragma once
 
 #include <stdio.h>
-
-int map[19][19];
-int flag;
+#include <Windows.h>
+int map[19][19];//棋盘
+int flag;//回合数
 
 //初始化
 void init();

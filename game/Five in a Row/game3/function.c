@@ -73,28 +73,6 @@ int playerMove(int x, int y) {
         }
     }
 }
-//int playerMove(int x, int y) {
-//    while (1) {
-//        if (x >= 0 && x <= 19 && y >= 0 && y <= 19) {
-//            if (map[x - 1][y - 1] == 0 ) {
-//                if (flag % 2 == 0)
-//                    map[x - 1][y - 1] = 1;//下黑子
-//                else
-//                    map[x - 1][y - 1] = 2;//下白子
-//                //落子成功
-//                return 1;
-//            }
-//            else {
-//                //该位置已有棋子
-//                return 0;
-//            }
-//        }
-//        else {
-//            //坐标不合法
-//            return -1;
-//        }
-//    }
-//}
 
 
 void menuView() {

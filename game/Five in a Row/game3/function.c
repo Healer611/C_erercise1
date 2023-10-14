@@ -12,6 +12,73 @@ void init() {
 }
 
 
+void menuView() {
+    printf("*************************\n");
+    printf("*****   1. play    ******\n");
+    printf("*****   0. exit    ******\n");
+    printf("*************************\n");
+}
+
+
+void gameView_ShowMap() {
+    int i, j;
+    printf("   ");
+    for (i = 0; i < 19; i++) {//打印横坐标
+        printf("%3d ", i);
+    }
+    printf("\n   ");
+    for (i = 0; i < 19; i++) {
+        printf("+---");
+    }
+    printf("+\n");
+
+    for (i = 0; i < 19; i++) {
+
+        printf("%2d |", i);//每行输出前先都打印纵坐标
+
+        for (j = 0; j < 19; j++) {
+            printf(" %d ", map[i][j]);
+            if (j < 18)
+                printf("|");
+        }
+        printf("|\n");
+
+        if (i < 18)
+            printf("   |");
+        if (i == 18)
+            printf("   +");
+        for (j = 0; j < 19; j++) {
+            printf("---");
+            if (j < 18)
+                printf("+");
+        }
+        printf("+\n");
+    }
+}
+
+
+int playerMove(int x, int y) {
+    if (x >= 0 && x < 19 && y >= 0 && y < 19) {
+        if (map[x][y] == 0) {
+            if (flag % 2 == 0)
+                map[x][y] = 1;//下黑子
+            else
+                map[x][y] = 2;//下白子
+            //落子成功
+            return 1;
+        }
+        else {
+            //该位置已有棋子
+            return 0;
+        }
+    }
+    else {
+        //坐标不合法
+        return -1;
+    }
+}
+
+
 int isWin(int x, int y) {
     int i, j;
     for (i = 0; i < 19; i++) {
@@ -48,79 +115,4 @@ int isWin(int x, int y) {
         }
     }
     return 0;
-}
-
-
-int playerMove(int x, int y) {
-    while (1) {
-        if (x >= 0 && x <= 19 && y >= 0 && y <= 19) {
-            if (map[x ][y ] == 0) {
-                if (flag % 2 == 0)
-                    map[x ][y ] = 1;//下黑子
-                else
-                    map[x ][y ] = 2;//下白子
-                //落子成功
-                return 1;
-            }
-            else {
-                //该位置已有棋子
-                return 0;
-            }
-        }
-        else {
-            //坐标不合法
-            return -1;
-        }
-    }
-}
-
-
-void menuView() {
-    printf("*************************\n");
-    printf("*****   1. play    ******\n");
-    printf("*****   0. exit    ******\n");
-    printf("*************************\n");
-}
-
-
-void gameView_ShowMap() {
-    int i, j;
-    printf("   ");
-    for (i = 0; i < 19; i++) {
-        printf("%3d ",i);
-    }
-    printf("\n   ");
-    for (i = 0; i < 19; i++) {
-        printf("+---");
-    }
-    printf("+\n");
-
-    for (i = 0; i < 19; i++) {
-        
-        printf("%2d |", i);
-
-        for (j = 0; j < 19; j++) {
-            printf(" %d ", map[i][j]);
-            if (j < 18)
-                printf("|");
-        }
-        printf("|\n");
-
-        if(i<18)
-            printf("   |");
-        if(i==18)
-            printf("   +");
-        for (j = 0; j < 19; j++) {
-            printf("---");
-            if (j < 18)
-                printf("+");
-        }
-        printf("+\n");
-    }
-}
-
-
-
-void winView() {
-    printf("\n\a恭喜你赢了！\n");
 }
